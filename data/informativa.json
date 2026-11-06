@@ -1,0 +1,65 @@
+[
+  {
+    "id": "about",
+    "tipo": "about",
+    "titulo": "Sobre el Nacho Bike Park",
+    "contenido": "El Nacho Bike Park es la comunidad de mountain bike y downhill del Parque Nacional Enrique Olaya Herrera, en los cerros orientales de Bogotá. Somos riders que construyen y mantienen sus propias pistas: cada descenso se mejora entre todos. Aquí corre gente de todos los niveles, desde los chiquis hasta élite, en un espacio urbano con montaña de verdad. Las rodadas, las jornadas de mantenimiento y los anuncios se publican en Instagram @nacho_bikepark.",
+    "imagen": "/images/monserrate-04.jpg",
+    "credito": "Foto: Felipe Restrepo Acosta (Wikimedia Commons, CC BY-SA 3.0)",
+    "enlace": "https://www.instagram.com/nacho_bikepark"
+  },
+  {
+    "id": "rules",
+    "tipo": "rules",
+    "titulo": "Reglas y Seguridad",
+    "contenido": "El parque es un espacio público compartido y la seguridad la construimos entre todos.",
+    "imagen": "/images/reglas.png",
+    "credito": "Captura: comunidad Nacho Bike Park",
+    "enlace": "",
+    "categorias": [
+      {
+        "id": "seguridad",
+        "titulo": "Seguridad",
+        "normas": [
+          { "texto": "Casco obligatorio y bien abrochado para bajar a la pista.", "caracter": "obligatoria" },
+          { "texto": "Revisa frenos, ruedas y presión antes de bajar.", "caracter": "recomendada" },
+          { "texto": "Usa guantes para proteger las manos en las caídas.", "caracter": "recomendada" },
+          { "texto": "Rodilleras recomendadas en zonas de saltos y peraltes.", "caracter": "recomendada" }
+        ]
+      },
+      {
+        "id": "en-la-pista",
+        "titulo": "En la pista",
+        "normas": [
+          { "texto": "No te detengas en la zona de aterrizaje: sal de la línea apenas caigas.", "caracter": "recomendada" },
+          { "texto": "No subas en sentido contrario al descenso.", "caracter": "obligatoria" },
+          { "texto": "Cede el paso al rider que va adelante.", "caracter": "recomendada" },
+          { "texto": "Cede el paso al rider que te pida pista.", "caracter": "recomendada" },
+          { "texto": "Baja solo cuando la pista esté despejada.", "caracter": "obligatoria" }
+        ]
+      },
+      {
+        "id": "en-el-parque",
+        "titulo": "En el parque",
+        "normas": [
+          { "texto": "Respeta los cierres por mantenimiento aunque la pista parezca lista.", "caracter": "obligatoria" },
+          { "texto": "Si hay una caída, avisa a quien viene bajando.", "caracter": "recomendada" },
+          { "texto": "Asiste al parque de lunes a viernes en horarios de la mañana.", "caracter": "recomendada" },
+          { "texto": "Acompañate de otros riders si montas entre lunes y viernes.", "caracter": "recomendada" },
+          { "texto": "No dejes basura en el cerro: llévate lo que traes.", "caracter": "obligatoria" },
+          { "texto": "Respeta a peatones y ciclistas que comparten el parque.", "caracter": "obligatoria" },
+          { "texto": "Participa en las jornadas Soil Searching de mantenimiento.", "caracter": "recomendada" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "attractions",
+    "tipo": "attraction",
+    "titulo": "Secciones Principales",
+    "contenido": "El parque es conocido por su Zona de vuelos: dos sectores de obstáculos construidos por la comunidad con drops, dobles, transfers, triples, mesetas y peraltes, además de una Línea dirt jump (Chilltrail) con saltos grandes para quien busca aire y trucos. El descenso insignia es la Clásica, con la línea Kamikaze y saltos para todos los niveles. Los fogueos cronometrados reúnen a la comunidad en las categorías Chiquis, Damas, Infantil, Novatos, Experto y Élite.",
+    "imagen": "/images/seccion-principal.png",
+    "credito": "Captura: comunidad Nacho Bike Park",
+    "enlace": ""
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "patos",
+    "nombre": "Patos",
+    "dificultad": "azul",
+    "descripcion": "Bajada rápida y divertida, ideal si buscas una experiencia emocionante y con distintas líneas que buscan ponerte a prueba.",
+    "imagen": "/images/pista-patos.png",
+    "credito": "Captura: comunidad Nacho Bike Park"
+  },
+  {
+    "id": "clasica",
+    "nombre": "Clásica",
+    "dificultad": "azul",
+    "descripcion": "Descenso insignia del parque; incluye la línea Kamikaze y saltos para todos los niveles",
+    "imagen": "/images/pista-clasica.png",
+    "credito": "Captura: comunidad Nacho Bike Park"
+  },
+  {
+    "id": "kraken",
+    "nombre": "Kraken",
+    "dificultad": "rojo",
+    "descripcion": "Línea técnica con sectores inclinados rápidos, peraltes y un camino cerrado entre la maleza; también cuenta con salto doble y contraperaltes. Corta pero ajisosa.",
+    "imagen": "/images/pista-kraken.png",
+    "credito": "Captura: comunidad Nacho Bike Park"
+  },
+  {
+    "id": "zona-de-vuelos",
+    "nombre": "Zona de vuelos",
+    "dificultad": "verde",
+    "dificultad_max": "rojo",
+    "descripcion": "Dos sectores de obstáculos construidos por la comunidad: drops, dobles, transfers, triples, mesetas y peraltes.",
+    "imagen": "/images/zona-vuelos.png",
+    "credito": "Captura: comunidad Nacho Bike Park"
+  },
+  {
+    "id": "linea-de-dirt-jump",
+    "nombre": "Línea dirt jump (Chilltrail)",
+    "dificultad": "rojo",
+    "descripcion": "Junto a la zona de vuelos encontrarás la sección de dirt jump con saltos pronunciados y su estilo de pared que lo caracteriza. Allí podrás alcanzar bastante aire, perfecto si buscas practicar trucos.",
+    "imagen": "/images/zona-dirt.png",
+    "credito": "Captura: comunidad Nacho Bike Park"
+  }
+]

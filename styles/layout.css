@@ -1,0 +1,324 @@
+/* layout.css — Chrome del tema "Manifesto": skip link, cabecera, page header y footer.
+   Importado por globals.css DESPUÉS de tokens.css y base.css (el reset vive en base.css).
+   Solo chrome y estructura de página: nada de variables, colores literales ni sombras. */
+
+/* ===== Contenedor (alias de migración para las páginas que aún usan .container) ===== */
+.container {
+  width: 100%;
+  max-width: var(--contenedor);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ===== Skip link (WCAG 2.4.1): oculto, aparece al foco con el acento ===== */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 200;
+  background: var(--acento);
+  color: var(--acento-tinta);
+  font-weight: 600;
+  font-size: var(--etiqueta);
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+}
+
+.skip-link:focus-visible {
+  left: 0;
+  outline-color: var(--acento-tinta);
+}
+
+/* ===== Cabecera: sticky, papel oscuro, barra de tinta de 4px ===== */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--papel);
+  border-bottom: var(--rule-bar) solid var(--tinta);
+}
+
+.cabecera-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  height: var(--header-altura);
+}
+
+/* Marca: emblema y wordmark en fila, lienzo cuadrado sin recorte */
+.marca {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logo-mark {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  /* Monocromo con alfa: invertido queda claro sobre el papel oscuro. */
+}
+
+.logo-text {
+  font-family: var(--fuente-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: var(--subtitulo);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  color: var(--tinta);
+  min-width: 0;
+}
+
+.marca:hover .logo-text {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Nav: lista horizontal en escritorio, panel móvil bajo 1024px */
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  min-width: 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+  min-width: 0;
+}
+
+.nav-list a {
+  font-family: var(--fuente-texto);
+  font-size: var(--etiqueta);
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0;
+  color: var(--tinta-2);
+  text-decoration: none;
+  display: inline-block;
+  padding-block: var(--space-2);
+}
+
+.nav-list a:hover {
+  color: var(--tinta);
+}
+
+/* Enlace activo: tinta con subrayado de 2px en el rojo de texto */
+.nav-list a[aria-current="page"] {
+  color: var(--tinta);
+  text-decoration: underline;
+  text-decoration-color: var(--acento-texto);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
+}
+
+/* CTA del nav: botón primario del sistema (.boton en base.css) */
+.nav-cta {
+  flex-shrink: 0;
+}
+
+/* Menú móvil: hamburguesa 44x44, líneas 26x2, solo transform/opacity */
+.menu-movil {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  width: 2.75rem;
+  height: 2.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu-linea {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--tinta);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.menu-movil[aria-expanded="true"] .menu-linea:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-movil[aria-expanded="true"] .menu-linea:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-movil[aria-expanded="true"] .menu-linea:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ===== Main / página ===== */
+.main {
+  position: relative;
+  min-height: calc(100vh - var(--header-altura));
+}
+
+.page {
+  padding-block: clamp(var(--space-10), 6vw, var(--space-20));
+}
+
+.page > header {
+  border-bottom: var(--rule-hair) solid var(--linea);
+  padding-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+
+/* h1 de ruta: display grande, NO --titulo (ese es de sección h2) */
+.page-title {
+  font-family: var(--fuente-display);
+  font-size: var(--display-2);
+  line-height: var(--leading-display);
+  color: var(--tinta);
+  margin-bottom: var(--space-4);
+}
+
+.page-subtitle {
+  color: var(--tinta-2);
+  font-size: var(--texto);
+  max-width: 62ch;
+}
+
+.back-link {
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  font-size: var(--etiqueta);
+}
+
+/* ===== Footer: mástil sobre papel-2 ===== */
+.footer {
+  background: var(--papel-2);
+  color: var(--tinta-2);
+  border-top: var(--rule-hair) solid var(--linea);
+  padding-block: var(--space-12);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  border-bottom: var(--rule-hair) solid var(--linea);
+  padding-bottom: var(--space-6);
+}
+
+.footer .logo-mark {
+   
+  width: 3rem;
+}
+
+/* Wordmark del footer: un punto más grande que el del header */
+.footer .logo-text {
+  font-size: var(--titulo);
+}
+
+/* Wordmark del mástil: .footer-marca es solo un agrupador; el elemento
+   real que envuelve emblema y palabra es .logo-brand (ámbito footer,
+   en el header .logo-brand se comparte con .marca). */
+.footer .logo-brand {
+  font-family: var(--fuente-display);
+  text-transform: uppercase;
+  font-size: var(--titulo);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  color: var(--tinta);
+}
+
+.footer-redes {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.footer-redes a {
+  font-size: var(--etiqueta);
+  font-weight: 500;
+  text-transform: lowercase;
+  color: var(--tinta-2);
+  text-decoration: none;
+}
+
+.footer-redes a:hover {
+  color: var(--tinta);
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding-top: var(--space-5);
+  font-size: var(--nano);
+  color: var(--tinta-apagada);
+}
+
+/* ===== Responsive: nav móvil hasta 1023px ===== */
+@media (max-width: 1023.98px) {
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-movil {
+    display: flex;
+  }
+
+  .navegacion {
+    position: static;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--papel-2);
+    border-top: var(--rule-hair) solid var(--linea);
+    padding: var(--space-2) var(--gutter) var(--space-4);
+    z-index: 150;
+  }
+
+  .nav-list.nav-open {
+    display: flex;
+  }
+
+  .nav-list a {
+    font-size: var(--texto);
+    padding: var(--space-3) 0;
+    border-bottom: var(--rule-hair) solid var(--linea);
+  }
+
+  .nav-list a[aria-current="page"] {
+    text-underline-offset: 0.3em;
+  }
+}
+
+/* Escritorio: lista horizontal y CTA visible */
+@media (min-width: 1024px) {
+  .nav-list {
+    flex-wrap: wrap;
+  }
+}

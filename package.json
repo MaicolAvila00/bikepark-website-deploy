@@ -1,0 +1,27 @@
+{
+  "name": "bikepark-website",
+  "version": "1.0.0",
+  "description": "Sitio estático de la comunidad de MTB Nacho Bike Park (Bogotá): información del parque, reglas, atracciones y agenda de eventos.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "validate:data": "node scripts/validar-datos.cjs",
+    "test": "node --test tests/*.test.js",
+    "serve": "npx serve out",
+    "agent:frontend": "opencode run --agent senior-frontend-dev --model opencode/glm-5.3-flash-free",
+    "agent:design": "opencode run --agent visual.design --model opencode/glm-5.3-flash-free",
+    "mcp:test": "opencode mcp list"
+  },
+  "dependencies": {
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "nacho-bike-fest-la-invasion-2025",
+    "titulo": "Nacho Bike Fest: La Invasión 2025",
+    "fecha_inicio": "2025-11-09",
+    "fecha_fin": "2025-11-09",
+    "hora": "09:00",
+    "lugar": "Nacho Bike Park — Parque Nacional, Bogotá",
+    "descripcion": "Edición 2025 del Nacho Bike Fest: carrera cronometrada con premios para los ganadores y disfraces temáticos, con categorías hasta Doble Experto y Élite. La comunidad se tomó el parque el domingo 9 de noviembre. Fecha verificada en el calendario de Travesía Deportiva y anuncios oficiales de la comunidad.",
+    "imagen": "/events/la-invasion-2025.jpg",
+    "credito": "Video: DRONGEOH (YouTube)",
+    "enlace": "https://travesiadeportiva.com/calendario/nacho-bike-fest-la-invasion"
+  },
+  {
+    "id": "fogueo-hallow-2025",
+    "titulo": "Fogueo Hallow",
+    "fecha_inicio": "2025-10-25",
+    "fecha_fin": "2025-10-25",
+    "hora": "09:00",
+    "lugar": "Nacho Bike Park — Parque Nacional, Bogotá",
+    "descripcion": "Fogueo cronometrado de temporada de Halloween: rodada de disfraces con toda la comunidad del parque. Historia destacada 'Fogueo Hallow' en el Instagram oficial. Fecha y hora aproximadas, reconstruidas desde las publicaciones de la comunidad (fines de semana de octubre de 2025).",
+    "imagen": "/events/fogueo-nbp.jpg",
+    "credito": "Video: edward3650 (YouTube)",
+    "enlace": ""
+  },
+  {
+    "id": "primer-fogueo-2023",
+    "titulo": "Primer Fogueo NBP 2023",
+    "fecha_inicio": "2023-07-08",
+    "fecha_fin": "2023-07-08",
+    "hora": "09:00",
+    "lugar": "Nacho Bike Park — Parque Nacional, Bogotá",
+    "descripcion": "La primera válida cronometrada del año 2023 del Nacho Bike Park, con categorías Chiquis, Damas, Infantil, Novatos y Experto. Grabación completa con tomas de dron en el canal de la comunidad (fechas aproximadas, video publicado el 11 de julio de 2023).",
+    "imagen": "/events/primer-fogueo-2023.jpg",
+    "credito": "Video: DRONGEOH (YouTube)",
+    "enlace": "https://www.youtube.com/watch?v=PdJ9Dig5hgI"
+  }
+]

@@ -1,0 +1,116 @@
+﻿/* Hallmark · design: Manifesto · genre: editorial · shape: index-first · hero: Ledge · theme: dark ground, Anton caps, one fighting red · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V5 · weakest: S — un sitio de barro y acción, no un cartel de protesta: la foto manda, el manifiesto no lo imita */
+/* Hallmark · waive 38iii · the red word sits once in the hero head: "Bogotá" · declared signature of the theme */
+
+/* Anton 400 latin: fuente display */
+@font-face {
+  font-family: 'Anton';
+  src: url('/fonts/anton-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Anton 400 latin-ext */
+@font-face {
+  font-family: 'Anton';
+  src: url('/fonts/anton-latin-ext-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Public Sans variable: fuente de texto */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans-latin-wght-normal.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Public Sans variable latin-ext */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans-latin-ext-wght-normal.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  /* Superficies: suelo oscuro, tres niveles */
+  --papel: oklch(13% 0.01 60);
+  --papel-2: oklch(17% 0.011 60);
+  --papel-3: oklch(22% 0.012 60);
+  /* Tinta */
+  --tinta: oklch(95% 0.014 85);
+  --tinta-2: oklch(84% 0.012 80);
+  --tinta-apagada: oklch(64% 0.016 65);
+  /* Líneas de regleta */
+  --linea: oklch(31% 0.014 60);
+  --linea-fuerte: oklch(42% 0.014 60);
+  /* El rojo único */
+  --acento: oklch(56% 0.228 28);
+  --acento-profundo: oklch(49% 0.2 28);
+  --acento-texto: oklch(64% 0.22 28);
+  --acento-tinta: oklch(98.5% 0.004 90);
+  /* Estado */
+  --foco: oklch(64% 0.22 28);
+  --error: oklch(62% 0.19 27);
+  /* Badges de dificultad: valores conservados del sistema anterior */
+  --dificultad-verde: #166534;
+  --dificultad-azul: #1e40af;
+  --dificultad-rojo: #b91c1c;
+  --dificultad-negro: #000000;
+  --dificultad-doble-negro: #7f1d1d;
+  --dificultad-texto: #FFFFFF;
+  /* Espaciado */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  /* Layout */
+  --header-altura: 4.5rem;
+  --contenedor: 1160px;
+  --gutter: clamp(1.5rem, 5vw, 4rem);
+  /* Tipografías */
+  --fuente-texto: 'Public Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fuente-display: 'Anton', 'Impact', ui-sans-serif, sans-serif;
+  /* Escala tipográfica */
+  --display-1: clamp(4.5rem, 12vw, 13rem);
+  --display-2: clamp(2.5rem, 5vw, 5rem);
+  --titulo: clamp(1.75rem, 2.6vw, 2.75rem);
+  --subtitulo: 1.25rem;
+  --texto: 1.0625rem;
+  --etiqueta: 0.8125rem;
+  --micro: 0.8125rem;
+  --nano: 0.75rem;
+  /* Interlineado */
+  --leading-display: 1.02;
+  --leading-tight: 0.9;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+  /* Radios: cero, esquinas vivas */
+  --radius: 0px;
+  --radius-pill: 0px;
+  /* Regla de señalización */
+  --rule-hair: 1px;
+  --rule-bar: 4px;
+  /* Movimiento */
+  --tracking-display: 0.004em;
+  --transition: 150ms ease-out;
+  --dur-long: 600ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
