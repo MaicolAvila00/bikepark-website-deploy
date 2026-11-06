@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate data
+        run: npm run validate:data
+
+      - name: Run tests
+        run: npm test
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: out/
+          retention-days: 7
+
+  # Optional: Lighthouse CI (commented out - uncomment when ready)
+  # lighthouse:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: '20'
+  #         cache: 'npm'
+  #     - name: Install dependencies
+  #       run: npm ci
+  #     - name: Build
+  #       run: npm run build
+  #     - name: Run Lighthouse CI
+  #       uses: treosh/lighthouse-ci-action@v11
+  #       with:
+  #         urls: |
+  #           http://localhost:3000/
+  #           http://localhost:3000/reglas
+  #           http://localhost:3000/atracciones
+  #           http://localhost:3000/eventos
+  #         budgetPath: ./lighthouse-budget.json
+  #         uploadArtifacts: true
+
+  # Optional: Deploy preview (uncomment when ready)
+  # deploy-preview:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   if: github.event_name == 'pull_request'
+  #   steps:
+  #     - name: Deploy to Netlify/Vercel preview
+  #       run: echo "Deploy preview logic here"
+  #       env:
+  #         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  #         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
