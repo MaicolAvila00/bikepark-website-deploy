@@ -1,0 +1,33 @@
+# Vercel ignore - solo lo necesario para build y deploy
+
+# Configuración de desarrollo / tooling
+.opencode/
+.hallmark/
+.atl/
+.vercel/
+.github/
+
+# Documentación interna
+AGENTS.md
+CHANGELOG.md
+DOCS/
+README.md
+
+# Tests y scripts de desarrollo
+tests/
+scripts/
+
+# Logs y archivos temporales
+*.log
+C:Users*
+
+# Build output (generado en CI)
+.next/
+out/
+node_modules/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
